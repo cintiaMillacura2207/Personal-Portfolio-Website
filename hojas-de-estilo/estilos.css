@@ -213,23 +213,23 @@ span{
 @keyframes words{
     0%,
     20%{
-        content: "Frontend Designer";
+        content: "Analista en Sistemas";
     }
     21%,
     40%{
-        content: "Web Designer";
+        content: "Frontend / Backend Developer";
     }
     41%,
     60%{
-        content: "UI / UI Designer";
+        content: "Fullstack Developer";
     }
     61%,
     80%{
-        content: "Web Developer";
+        content: "Tester QA Junior";
     }
     81%,
     100%{
-        content: "Software Tester";
+        content: "Analista de Datos";
     }
 }
 @keyframes typing{
