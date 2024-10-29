@@ -8,12 +8,11 @@
     scroll-behavior: smooth;
     font-family: "Poppins",sans-serif;
 }
-
 :root{
-    --bg-color:#080808;
-    --second-bg-color: #131313;
+    --bg-color:#191f36;
+    --second-bg-color: #262B40;
     --text-color:#fff;
-    --main-color: #00ffee;
+    --main-color: #59B2F4;
 }
 html{
     font-size: 60%;
@@ -217,7 +216,7 @@ span{
     }
     21%,
     40%{
-        content: "Frontend / Backend Developer";
+        content: "Web Developer";
     }
     41%,
     60%{
