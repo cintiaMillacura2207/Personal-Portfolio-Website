@@ -309,7 +309,7 @@ span{
 
 .education{
     padding: 100px 15px;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 .education h2{
     margin-bottom: 5rem;
@@ -398,9 +398,9 @@ span{
     background-color: var(--bg-color);
     width: 50px;
 }
-
+/* services section css --------------------------- */
 .services{
-    background: var(--bg-color);
+    background: var(--second-bg-color);
     color: black;
 }
 .services h2{
@@ -408,45 +408,73 @@ span{
     color: white;
 }
 .services-container{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    display: flex;
+    /* grid-template-columns: repeat(2,1fr);
     align-items: center;
-    gap: 2.5rem;
+    gap: 2.5rem; */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-gap: 2rem;
 }
 .service-box{
+    flex: 1 1 18rem;
+    padding: 1rem 1rem 2rem;
+    text-align: center;
     background-color: var(--main-color);
-    height: 300px;
-    border-radius: 3rem;
-    border: 5px solid transparent;
+    transition: transform .4s;
+    border-radius: 10px;
+    height: 450px;
     cursor: pointer;
-    transition: 0.4s ease-in-out;
 }
 .service-box:hover{
     background: white;
     color: black;
     border: 5px solid var(--main-color);
-    transform: scale(1.03);
+    transform: translateY(-.8rem);
 }
+.service-icon{
+    border: 2px solid var(--bg-color);
+    padding: 2rem;
+    background: var(--text-color);
+    display: flex;
+    align-items: center;
+    font-size: 4rem;
+    border-radius: 20%;
+    position: relative;
+    color: var(--bg-color);
+    box-shadow: 0 0 50px #fff;
+    outline: 3px solid var(--bg-color);
+}
+.service-icon:hover{
+    box-shadow: 0 0 25px var(--main-color),    
+                0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
+}
+
 .service-box .service-info{
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: center;
     max-height: 200px;
     justify-content: left;
-    align-items: baseline;
+    align-items: center;
     padding: 5rem 5rem;
 }
 .service-info h4{
-    font-size: 3rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 2rem;
     font-weight: 800;
     line-height: 2;
 }
 .service-info p{
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 600;
     max-height: 100px;
     line-height: 1.7;
     margin: auto;
+    letter-spacing: 1px;
 }
 .footer .social{
     text-align: center;
