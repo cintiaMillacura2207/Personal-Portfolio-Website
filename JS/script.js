@@ -2,6 +2,16 @@ let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a'); 
+let previousTitle = document.title
+
+window.addEventListener('blur', () =>{
+    previousTitle = document.title
+    document.title = '¡No te vayas! ¡vuelve!'
+})
+
+window.addEventListener('focus', () =>{
+    document.title = previousTitle
+})
 
 window.onscroll = () => {
 
@@ -28,3 +38,5 @@ menuIcon.onclick = () =>{
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active')
 }
+
+
