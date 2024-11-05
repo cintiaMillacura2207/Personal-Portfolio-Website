@@ -6,19 +6,32 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: "Poppins",sans-serif;
 }
 :root{
     --bg-color:#191f36;
     --second-bg-color: #262B40;
     --text-color:#fff;
     --main-color: #59B2F4;
+    --hover-color: #81bfee;
+    --big-font: 2.5rem;
+    --normal-font:2rem;
+    --neon-box-shadow: 0 0 .5rem #12f7ff;
+    --h2-font:3rem;
+    --font-neon-text-shadow:0 0 10px rgba(18,247,255, 0.3),
+    0 0 20px rgba(18,247,255, 0.3),
+    0 0 30px rgba(18,247,255, 0.3),
+    0 0 40px rgba(18,247,255, 0.3),
+    0 0 70px rgba(18,247,255, 0.3),
+    0 0 80px rgba(18,247,255, 0.3),
+    0 0 100px rgba(18,247,255, 0.3),
+    0 0 150px rgba(18,247,255, 0.3);
 }
 html{
     font-size: 60%;
     overflow-x: hidden;
 }
 body{
+    font-family: "Poppins",sans-serif;
     background: var(--bg-color);
     color: var(--text-color);
 }
@@ -270,7 +283,7 @@ span{
         width: calc(100% + 8px);
     }
 }
-
+/* about section css --------------------------- */
 .about{
     display: flex;
     justify-content: center;
@@ -307,6 +320,7 @@ span{
                 0 0 100px var(--main-color);
 }
 
+/* education section css --------------------------- */
 .education{
     padding: 100px 15px;
     background: var(--bg-color);
@@ -616,5 +630,175 @@ span{
     }
     .services-container{
         grid-template-columns: repeat(1,1fr);
+    }
+}
+
+/* skills section css --------------------------- */
+.skills{
+    background: var(--bg-color);   
+}
+.skill-main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 50px;
+}
+.skill-bar{
+    margin-bottom: 2.3rem;
+}
+.skill-main h3{
+    margin-bottom: 2rem;
+    font-size: var(--normal-font);
+    text-align: center;
+}
+.skill-left .skill-bar .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.skill-left .skill-bar .bar{
+    width: 100%;
+    height: 10px;
+    background-color: var(--second-bg-color);
+    border-radius: 25px;
+    margin-top: 10px;
+    position: relative;
+}
+.skill-bar .bar span{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background: var(--main-color);
+    box-shadow: var(--neon-box-shadow);
+}
+.skill-bar .bar .html{
+    width: 70%;
+    animation: html 2s;
+}
+
+.skill-bar .bar .css{
+    width: 70%;
+    animation: css 3s;
+}
+
+.skill-bar .bar .java{
+    width: 75%;
+    animation: java 4s;
+}
+
+.skill-bar .bar .python{
+    width: 70%;
+    animation: python 5s;
+}
+
+.skill-bar .bar .sql{
+    width: 70%;
+    animation: python 6s;
+}
+/* skill right */
+.professional{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.box{
+    position: relative;
+    margin: 10px 0;
+    flex: 1 1 15rem;
+}
+.box .text{
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+}
+.box .text big{
+    font: 400;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box .text small{
+    display: block;
+    font-weight: 600;
+}
+
+.circle{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle .points{
+    width: 2px;
+    height: 10px;
+    background-color: var(--second-bg-color);
+    position: absolute;
+    border-radius: 3px;
+    transform: rotate(calc(var(--i)*var(--rot))) translateY(-45px);
+}
+
+.points.marked{
+    animation: glow 0.04s linear forwards;
+    animation-delay: calc(var(--i)*0.05s);
+}
+
+
+
+/* Keyframes ---------------------------------------------------- */
+@keyframes html{
+    0%{
+        width: 0%
+    }
+    100%{
+        width: 70%;
+    }
+}
+@keyframes css{
+    0%{
+        width: 0%
+    }
+    100%{
+        width: 70%;
+    }
+}
+@keyframes java{
+    0%{
+        width: 0%
+    }
+    100%{
+        width: 75%;
+    }
+}
+@keyframes python{
+    0%{
+        width: 0%
+    }
+    100%{
+        width: 70%;
+    }
+}
+@keyframes sql{
+    0%{
+        width: 0%
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+@keyframes glow{
+    0%{
+        background: var(--bg-color);
+        box-shadow: none;
+    }
+    100%{
+        background: var(--hover-color);
+        box-shadow: var(--neon-box-shadow);
     }
 }
